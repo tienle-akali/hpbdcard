@@ -60,18 +60,20 @@ export default function BirthdayCard() {
           </div>
         </div>
       </div>
-      <iframe
-        style={{ display: "none", visibility: "hidden" }}
-        width="560"
-        height="315"
-        src={`https://www.youtube.com/embed/${ytb}?autoplay=${
-          autoplay ? 1 : 0
-        }`}
-        title="YouTube video player"
-        allow={`accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share`}
-        referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen
-      ></iframe>
+      {ytb && (
+        <iframe
+          style={{ display: "none", visibility: "hidden" }}
+          width="560"
+          height="315"
+          src={`https://www.youtube.com/embed/${ytb}?autoplay=${
+            autoplay ? 1 : 0
+          }`}
+          title="YouTube video player"
+          allow={`accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share`}
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
+      )}
     </>
   );
 }
