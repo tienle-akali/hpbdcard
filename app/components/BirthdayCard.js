@@ -11,7 +11,7 @@ export default function BirthdayCard() {
 
   const openText = searchParams.get("openText") || "Click to open";
   const from = searchParams.get("from") || "";
-  const scale = searchParams.get("scale") || 1.1;
+  const scale = searchParams.get("scale") || 1;
   const ytb = searchParams.get("ytb") || "";
 
   const text = (
