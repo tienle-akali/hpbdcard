@@ -62,14 +62,20 @@ export default function BirthdayCard() {
       </div>
       {ytb && (
         <iframe
-          style={{ display: "none", visibility: "hidden" }}
+          style={{
+            position: "absolute", // Ẩn nhưng vẫn giữ trong DOM
+            top: "-9999px", // Đẩy iframe ra ngoài màn hình
+            left: "-9999px",
+            opacity: 0, // Hoặc dùng opacity để ẩn
+            border: "none",
+          }}
           width="560"
           height="315"
           src={`https://www.youtube.com/embed/${ytb}?autoplay=${
             autoplay ? 1 : 0
           }`}
           title="YouTube video player"
-          allow={`accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share`}
+          allow={`autoplay; encrypted-media`}
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
         ></iframe>
